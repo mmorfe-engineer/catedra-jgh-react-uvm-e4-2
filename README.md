@@ -37,14 +37,36 @@ Vite indica la URL local con el prefijo `/catedra-jgh-react-uvm-e4-2/`. Las 6 pr
 
 ## Entregables
 
-- Código en [GitHub](https://github.com/mmorfe-engineer/catedra-jgh-react-uvm-e4-2).
-- GitHub Pages verificado en Chromium con CRUD y recargas en tres tamaños. [Abrir el gestor](https://mmorfe-engineer.github.io/catedra-jgh-react-uvm-e4-2/)
-- Figma pendiente — acción humana externa. [Especificación](docs/FIGMA_SPEC.md)
-- Video pendiente — acción humana externa. [Guion](docs/VIDEO_SCRIPT.md)
+- Aplicación publicada y verificada con Chromium en escritorio, tableta y móvil. [GitHub Pages](https://mmorfe-engineer.github.io/catedra-jgh-react-uvm-e4-2/)
+- Presentación académica de 12 láminas en PowerPoint. [Descargar presentación](docs/presentacion/uvm-e-actividad-4-2.pptx)
+- Historial de la segunda contribución. [PR de filtros y accesibilidad](https://github.com/mmorfe-engineer/catedra-jgh-react-uvm-e4-2/pull/1) · [PR de validación en producción](https://github.com/mmorfe-engineer/catedra-jgh-react-uvm-e4-2/pull/2)
+- **Figma nativo pendiente.** [Paquete de referencia](docs/figma/README.md) · [Especificación](docs/FIGMA_SPEC.md)
+- **Video explicativo pendiente.** [Guion](docs/VIDEO_SCRIPT.md)
 
-## Capturas locales
+## Capturas de la interfaz
 
-[Escritorio](docs/assets/desktop.png) · [Tableta](docs/assets/tablet.png) · [Móvil](docs/assets/movil.png) · [Editor móvil](docs/assets/movil-editor.png)
+<img src="docs/assets/desktop-institucional.png" alt="Cabecera con emblema UVM y portada con el retrato artístico de José Gregorio Hernández, en escritorio" width="560">
+<img src="docs/assets/movil-institucional.png" alt="Cabecera y portada institucional en móvil, con el retrato debajo del texto" width="180">
+
+[Portada en escritorio](docs/assets/desktop-institucional.png) · [Portada en tableta](docs/assets/tablet-institucional.png) · [Portada en móvil](docs/assets/movil-institucional.png)
+
+<img src="docs/assets/desktop-filtros.png" alt="Gestor en escritorio con filtros Taller y Planificada y una tarjeta visible" width="560">
+<img src="docs/assets/movil-filtros-vacio.png" alt="Gestor móvil sin coincidencias y con foco visible en Restablecer filtros" width="180">
+
+[Escritorio](docs/assets/desktop.png) · [Página completa en tableta](docs/assets/tablet-principal.png) · [Listado en tableta](docs/assets/tablet.png) · [Móvil](docs/assets/movil.png) · [Editor móvil](docs/assets/movil-editor.png)
+
+## Galería de referencias para Figma
+
+| Frame | Referencia |
+| --- | --- |
+| Principal | <a href="docs/figma/01-desktop-principal.png"><img src="docs/figma/01-desktop-principal.png" alt="Página principal de escritorio" width="180"></a> |
+| Nueva actividad | <a href="docs/figma/02-desktop-nueva-actividad.png"><img src="docs/figma/02-desktop-nueva-actividad.png" alt="Formulario de alta en escritorio" width="180"></a> |
+| Actividades | <a href="docs/figma/03-desktop-actividades.png"><img src="docs/figma/03-desktop-actividades.png" alt="Listado con una actividad en escritorio" width="180"></a> |
+| Edición | <a href="docs/figma/04-desktop-edicion.png"><img src="docs/figma/04-desktop-edicion.png" alt="Formulario de edición en escritorio" width="180"></a> |
+| Móvil · Principal | <a href="docs/figma/05-mobile-principal.png"><img src="docs/figma/05-mobile-principal.png" alt="Página principal en móvil" width="95"></a> |
+| Móvil · Formulario y listado | <a href="docs/figma/06-mobile-formulario-listado.png"><img src="docs/figma/06-mobile-formulario-listado.png" alt="Formulario y listado en móvil" width="95"></a> |
+
+[Sistema de diseño](docs/figma/07-sistema-de-diseno.svg) · [Dimensiones e instrucciones de incorporación](docs/figma/README.md)
 
 ## Fuentes
 

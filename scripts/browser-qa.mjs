@@ -43,8 +43,26 @@ try {
     const response = await page.goto(url)
     assert.equal(response.ok(), true)
     await page.getByRole('heading', { name: /Vida, ciencia/ }).waitFor()
+    const logo = page.locator('.university-logo')
+    const portrait = page.getByRole('img', { name: /Retrato artístico del Dr\. José Gregorio Hernández/ })
+    for (const asset of [logo, portrait]) {
+      await asset.evaluate(image => image.decode())
+      const dimensions = await asset.evaluate(image => ({
+        ratio: image.naturalWidth / image.naturalHeight,
+        displayed: image.width / image.height,
+      }))
+      assert.ok(Math.abs(dimensions.ratio - dimensions.displayed) < 0.025)
+      assert.equal(await asset.isVisible(), true)
+    }
+    assert.equal(await logo.getAttribute('alt'), '')
+    assert.match(await portrait.evaluate(image => image.currentSrc), /jgh-intarsia-384/)
+    const textBounds = await page.getByRole('heading', { name: /Vida, ciencia/ }).boundingBox()
+    const artBounds = await portrait.boundingBox()
+    assert.equal(width <= 736 ? artBounds.y > textBounds.y + textBounds.height
+      : artBounds.x > textBounds.x + textBounds.width, true)
     await checkLayout()
-    if (evidence && name !== 'tablet') {
+    if (evidence) {
+      await page.screenshot({ path: `${evidence}/${name}-institucional.png` })
       await page.screenshot({ path: `${evidence}/${name}-principal.png`, fullPage: true })
     }
     for (let step = 0; step < 4; step++) await page.keyboard.press('Tab')

@@ -1,0 +1,23 @@
+* { box-sizing: border-box; }
+
+:root {
+  --paper: #f8f5ee;
+  --ink: #203236;
+  --petroleum: #103d45;
+  --gold: #f0d39a;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+body { margin: 0; }
+.container { width: min(70rem, calc(100% - 2rem)); margin-inline: auto; }
+.site-header, .site-footer { background: var(--petroleum); color: var(--paper); padding-block: 1.25rem; }
+.site-header p { margin-block: 0; }
+.site-header small { color: var(--gold); }
+main { padding-block: clamp(2rem, 6vw, 5rem); }
+.hero { margin-bottom: 3rem; }
+h1, h2 { font-family: Georgia, serif; line-height: 1.1; }
+h1 { font-size: clamp(2.6rem, 7vw, 5rem); margin-block: .2em; }
+main p { max-width: 62ch; }

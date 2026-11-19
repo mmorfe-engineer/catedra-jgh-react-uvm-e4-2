@@ -49,7 +49,7 @@ try {
     }
     for (let step = 0; step < 4; step++) await page.keyboard.press('Tab')
     await checkFocus(button('Nueva actividad'))
-    assert.equal(await button('Nueva actividad').evaluate(element => getComputedStyle(element).outlineWidth), '3px')
+    assert.equal(await button('Nueva actividad').evaluate(element => window.getComputedStyle(element).outlineWidth), '3px')
     await page.keyboard.press('Enter')
     await checkFocus(editorHeading('Nueva actividad'))
     await page.keyboard.press('Tab')
@@ -114,7 +114,7 @@ try {
       ...record,
     }))
     const storageKey = 'catedra-jgh-e4-2.activities.v1'
-    await page.evaluate(([key, records]) => localStorage.setItem(key, JSON.stringify(records)), [storageKey, fixtures])
+    await page.evaluate(([key, records]) => window.localStorage.setItem(key, JSON.stringify(records)), [storageKey, fixtures])
     await reload()
 
     const type = page.getByRole('combobox', { name: 'Filtrar por tipo', exact: true })
@@ -156,7 +156,7 @@ try {
     }
     await reset.click()
     await checkTitles('Taller de servicio', 'Taller de ciencia', 'Curso de docencia')
-    assert.deepEqual(JSON.parse(await page.evaluate(key => localStorage.getItem(key), storageKey)), fixtures)
+    assert.deepEqual(JSON.parse(await page.evaluate(key => window.localStorage.getItem(key), storageKey)), fixtures)
 
     await button('Nueva actividad').click()
     await button('Cancelar').click()

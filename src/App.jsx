@@ -1,5 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import { activityOptions } from './activities.js'
+import portraitSmall from './assets/jgh-intarsia-384.webp'
+import portraitLarge from './assets/jgh-intarsia-768.webp'
+import universityLogo from './assets/uvm-logo.webp'
 import { ActivityForm } from './components/ActivityForm.jsx'
 import { ActivityList } from './components/ActivityList.jsx'
 import { Html5Guide } from './components/Html5Guide.jsx'
@@ -87,10 +90,13 @@ export function App() {
     <>
       <header className="site-header">
         <div className="container header-content">
-          <div>
-            <p className="university">Universidad Valle del Momboy</p>
-            <p>Cátedra Libre Dr. José Gregorio Hernández</p>
-            <small>E-Actividad 4.2 · ReactJS</small>
+          <div className="institution">
+            <img className="university-logo" src={universityLogo} alt="" width="192" height="192" />
+            <div>
+              <p className="university">Universidad Valle del Momboy</p>
+              <p>Cátedra Libre Dr. José Gregorio Hernández</p>
+              <small>E-Actividad 4.2 · ReactJS</small>
+            </div>
           </div>
           <nav aria-label="Navegación principal">
             <a href="#gestor">Actividades</a>
@@ -107,6 +113,18 @@ export function App() {
               <p>Organiza actividades de formación, reflexión y divulgación de la Cátedra Libre Dr. José Gregorio Hernández.</p>
               <a className="button-link" href="#gestor">Ir al gestor</a>
             </section>
+            <div className="hero-art">
+              <img
+                src={portraitSmall}
+                srcSet={`${portraitSmall} 384w, ${portraitLarge} 768w`}
+                sizes="(max-width: 46rem) min(68vw, 17rem), min(36vw, 23rem)"
+                alt="Retrato artístico del Dr. José Gregorio Hernández, con sombrero y traje, en estilo intarsia."
+                width="768"
+                height="841"
+                fetchPriority="high"
+                decoding="async"
+              />
+            </div>
             <section className="about" aria-labelledby="about-title">
               <h2 id="about-title">Sobre la Cátedra</h2>
               <p>Un espacio de formación y reflexión para estudiar su vida, obra y virtudes, con atención a su legado científico, su docencia y su vocación de servicio.</p>

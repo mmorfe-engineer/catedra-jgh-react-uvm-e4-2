@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="950" viewBox="0 0 1200 950" role="img" aria-labelledby="title description">
+  <title id="title">Sistema de diseño del gestor de actividades</title>
+  <desc id="description">Paleta, escala tipográfica y ejemplos de controles con los valores de styles.css.</desc>
+  <rect width="1200" height="950" fill="#F8F5EE"/>
+  <rect width="1200" height="132" fill="#103D45"/>
+  <g font-family="system-ui, sans-serif" fill="#203236">
+    <text x="52" y="39" fill="#F0D39A" font-size="16" font-weight="650">CÁTEDRA LIBRE DR. JOSÉ GREGORIO HERNÁNDEZ</text>
+    <text x="52" y="94" fill="#F8F5EE" font-family="Georgia, serif" font-size="48" font-weight="700">Sistema de diseño</text>
+    <text x="52" y="184" font-family="Georgia, serif" font-size="28" font-weight="700">Paleta</text>
+    <g font-size="15" font-weight="650">
+      <rect x="52" y="209" width="168" height="48" rx="6" fill="#103D45"/><text x="52" y="280">Petróleo · #103D45</text>
+      <rect x="237" y="209" width="168" height="48" rx="6" fill="#203236"/><text x="237" y="280">Tinta · #203236</text>
+      <rect x="422" y="209" width="168" height="48" rx="6" fill="#4B5D5E"/><text x="422" y="280">Secundario · #4B5D5E</text>
+      <rect x="607" y="209" width="168" height="48" rx="6" fill="#F0D39A"/><text x="607" y="280">Dorado · #F0D39A</text>
+      <rect x="792" y="209" width="168" height="48" rx="6" fill="#A47D40"/><text x="792" y="280">Acento · #A47D40</text>
+      <rect x="977" y="209" width="168" height="48" rx="6" fill="#8A2E29"/><text x="977" y="280">Error · #8A2E29</text>
+      <rect x="52" y="305" width="168" height="48" rx="6" fill="#F8F5EE" stroke="#D8D2C5"/><text x="52" y="376">Papel · #F8F5EE</text>
+      <rect x="237" y="305" width="168" height="48" rx="6" fill="#EDE7D8"/><text x="237" y="376">Hero · #EDE7D8</text>
+      <rect x="422" y="305" width="168" height="48" rx="6" fill="#FFFCF6" stroke="#D8D2C5"/><text x="422" y="376">Panel · #FFFCF6</text>
+      <rect x="607" y="305" width="168" height="48" rx="6" fill="#D8D2C5"/><text x="607" y="376">Línea · #D8D2C5</text>
+      <rect x="792" y="305" width="168" height="48" rx="6" fill="#778987"/><text x="792" y="376">Control · #778987</text>
+      <rect x="977" y="305" width="168" height="48" rx="6" fill="#644B23"/><text x="977" y="376">Metadatos · #644B23</text>
+    </g>
+    <path d="M52 410H1145" stroke="#D8D2C5"/>
+    <text x="52" y="455" font-family="Georgia, serif" font-size="28" font-weight="700">Tipografía</text>
+    <text x="52" y="520" font-family="Georgia, serif" font-size="48" font-weight="700" fill="#103D45">Vida, ciencia y servicio.</text>
+    <text x="52" y="553" font-size="16">Georgia · H1 41,6–80 px · H2 26,4–37,6 px · altura de línea 1,1</text>
+    <text x="52" y="584" font-size="16">System UI · texto y controles de 16 px · altura de línea 1,6</text>
+    <text x="52" y="643" font-family="Georgia, serif" font-size="28" font-weight="700">Retícula y espaciado</text>
+    <text x="52" y="682" font-size="16">Ancho máximo 1120 px · separación base 16 px · márgenes móviles 12 px</text>
+    <text x="52" y="712" font-size="16">736 px · retrato apilado con el texto y métricas en dos columnas</text>
+    <text x="52" y="742" font-size="16">512 px · formulario, filtros y guía a una columna</text>
+    <path d="M633 432V749" stroke="#D8D2C5"/>
+    <text x="672" y="455" font-family="Georgia, serif" font-size="28" font-weight="700">Controles y estados</text>
+    <rect x="672" y="480" width="155" height="46" rx="6.4" fill="#103D45"/>
+    <text x="688" y="509" fill="#FFFFFF" font-size="16" font-weight="650">Nueva actividad</text>
+    <rect x="850" y="480" width="138" height="46" rx="6.4" fill="#FFFCF6" stroke="#103D45"/>
+    <rect x="845.5" y="475.5" width="147" height="55" rx="10.9" fill="none" stroke="#103D45" stroke-width="3"/>
+    <text x="869" y="509" fill="#103D45" font-size="16" font-weight="650">Cancelar</text>
+    <rect x="1011" y="480" width="134" height="46" rx="6.4" fill="#FFFCF6" stroke="#8A2E29"/>
+    <text x="1030" y="509" fill="#8A2E29" font-size="16" font-weight="650">Eliminar</text>
+    <text x="672" y="563" font-size="16" font-weight="650">Filtrar por tipo</text>
+    <rect x="672" y="574" width="473" height="46" rx="5.6" fill="#FFFFFF" stroke="#778987"/>
+    <text x="688" y="603" font-size="16">Todos los tipos</text>
+    <path d="m1120 594 5 5 5-5" fill="none" stroke="#203236" stroke-width="2"/>
+    <text x="672" y="660" font-size="16">Foco visible · contorno de 3 px y separación de 3 px</text>
+    <text x="672" y="693" font-size="16" fill="#8A2E29" font-weight="650">Completa el campo Título.</text>
+    <text x="672" y="726" font-size="16" fill="#203236">Ninguna actividad coincide con los filtros.</text>
+    <rect x="52" y="799" width="1093" height="96" rx="8.8" fill="#FFFCF6" stroke="#D8D2C5"/>
+    <text x="74" y="835" font-size="16" font-weight="650">Componentes para reconstruir</text>
+    <text x="74" y="868" font-size="16">Cabecera con emblema UVM · hero con retrato · métrica · tarjeta · campo · botón · filtros · mensaje de estado</text>
+  </g>
+</svg>

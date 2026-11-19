@@ -32,3 +32,16 @@ Capturas con datos ficticios en [escritorio](assets/desktop-filtros.png), [móvi
 El [PR #1](https://github.com/mmorfe-engineer/catedra-jgh-react-uvm-e4-2/pull/1) quedó integrado en `897f472aab4aef5c76d226d9e2da9e8e3a409902`. Los trabajos de compilación y despliegue del [workflow 44604085430](https://github.com/mmorfe-engineer/catedra-jgh-react-uvm-e4-2/actions/runs/44604085430) concluyeron correctamente.
 
 Chromium repitió el recorrido completo en [GitHub Pages](https://mmorfe-engineer.github.io/catedra-jgh-react-uvm-e4-2/). Los tres tamaños aprobaron filtros, teclado, foco, mensajes de estado, CRUD, persistencia y responsive. Cada recorrido usó un perfil de prueba independiente.
+
+## Cierre documental
+
+- `npm test`, `npm run lint` y `npm run build` finalizaron correctamente. La ejecución directa confirmó seis casos unitarios aprobados.
+- Chromium repitió el recorrido en producción en 1440 × 1000, 768 × 1024 y 390 × 844. El [workflow del HEAD publicado](https://github.com/mmorfe-engineer/catedra-jgh-react-uvm-e4-2/actions/runs/44604595775) confirmó el despliegue de `3806f3c1e3c5a87b882d8c8b01510bc02960ddf8`.
+- La [presentación](presentacion/uvm-e-actividad-4-2.pptx) se renderizó en LibreOffice y se revisó visualmente en 12 láminas de formato 16:9. El [paquete de referencia Figma](figma/README.md) contiene seis capturas reales y una lámina vectorial con el sistema de diseño.
+- Se verificaron las rutas locales nuevas y los enlaces públicos. El archivo nativo de Figma y el video explicativo siguen pendientes.
+
+## Refinamiento visual institucional
+
+La compilación local pasó `npm test`, `npm run lint` y `npm run build`. Chromium completó el recorrido de CRUD, filtros, teclado, foco y persistencia en escritorio (1440 × 1000), tableta (768 × 1024) y móvil (390 × 844). El recorrido también comprobó la carga y proporción del emblema y el retrato, la selección de la variante WebP de 384 px a densidad 1× y el cambio de posición del retrato sin desbordamiento horizontal.
+
+Se revisaron las nuevas capturas de [escritorio](assets/desktop-institucional.png), [tableta](assets/tablet-institucional.png) y [móvil](assets/movil-institucional.png). Se actualizaron las seis referencias para Figma y se volvieron a renderizar y revisar las 12 láminas de la presentación.

@@ -10,11 +10,34 @@ export function App() {
   const [editor, setEditor] = useState(null)
   const [message, setMessage] = useState('')
   const [changeError, setChangeError] = useState('')
+  const [tipo, setTipo] = useState('')
+  const [estado, setEstado] = useState('')
   const editorHeading = useRef(null)
+  const newButton = useRef(null)
+  const resultsHeading = useRef(null)
+  const editButtons = useRef(new Map())
+  const pendingFocus = useRef(null)
+
+  const visibleRecords = records.filter(activity =>
+    (!tipo || activity.tipo === tipo) && (!estado || activity.estado === estado))
 
   useEffect(() => {
     if (editor) editorHeading.current?.focus()
   }, [editor])
+
+  useEffect(() => {
+    const target = pendingFocus.current
+    if (!target) return
+    pendingFocus.current = null
+    const button = target.newActivity ? newButton.current : editButtons.current.get(target.id)
+    const destination = button ?? resultsHeading.current
+    destination?.focus()
+  }, [editor, records])
+
+  function registerEditButton(id, button) {
+    if (button) editButtons.current.set(id, button)
+    else editButtons.current.delete(id)
+  }
 
   function openEditor(activity = null) {
     setMessage('')
@@ -24,16 +47,24 @@ export function App() {
 
   function saveActivity(values) {
     const activity = editor.activity
+    const id = activity?.id ?? crypto.randomUUID()
     const failure = save({
       type: activity ? 'update' : 'create',
-      id: activity?.id ?? crypto.randomUUID(),
+      id,
       now: new Date().toISOString(),
       values,
     })
     setChangeError(failure)
     if (failure) return
+    pendingFocus.current = { id }
     setEditor(null)
     setMessage(activity ? 'Cambios guardados.' : 'Actividad creada.')
+  }
+
+  function cancelEditor() {
+    pendingFocus.current = editor.activity ? { id: editor.activity.id } : { newActivity: true }
+    setEditor(null)
+    setChangeError('')
   }
 
   function deleteActivity(activity) {
@@ -41,7 +72,10 @@ export function App() {
     const failure = save({ type: 'delete', id: activity.id })
     setChangeError(failure)
     setMessage(failure ? '' : 'Actividad eliminada.')
-    if (!failure && editor?.activity?.id === activity.id) setEditor(null)
+    if (failure) return
+    const index = visibleRecords.findIndex(record => record.id === activity.id)
+    pendingFocus.current = { id: (visibleRecords[index + 1] ?? visibleRecords[index - 1])?.id }
+    if (editor?.activity?.id === activity.id) setEditor(null)
   }
 
   const metrics = [
@@ -86,7 +120,7 @@ export function App() {
                 <h2 id="activity-title">Actividades formativas</h2>
                 <p>Los registros se guardan en este navegador.</p>
               </div>
-              <button type="button" disabled={Boolean(error)} onClick={() => openEditor()}>Nueva actividad</button>
+              <button ref={newButton} type="button" disabled={Boolean(error)} onClick={() => openEditor()}>Nueva actividad</button>
             </div>
             {error ? <p role="alert" className="error">{error}</p> : (
               <>
@@ -101,10 +135,38 @@ export function App() {
                       {editor.activity ? 'Editar actividad' : 'Nueva actividad'}
                     </h3>
                     <ActivityForm key={editor.activity?.id ?? 'new'} activity={editor.activity}
-                      onSubmit={saveActivity} onCancel={() => { setEditor(null); setChangeError('') }} />
+                      onSubmit={saveActivity} onCancel={cancelEditor} />
                   </section>
                 )}
-                <ActivityList activities={records} onEdit={openEditor} onDelete={deleteActivity} />
+                <fieldset>
+                  <legend>Filtros de actividades</legend>
+                  <div className="filter-controls">
+                    <label>
+                      Filtrar por tipo
+                      <select value={tipo} onChange={event => setTipo(event.target.value)}>
+                        <option value="">Todos los tipos</option>
+                        {activityOptions.tipo.map(option => <option key={option}>{option}</option>)}
+                      </select>
+                    </label>
+                    <label>
+                      Filtrar por estado
+                      <select value={estado} onChange={event => setEstado(event.target.value)}>
+                        <option value="">Todos los estados</option>
+                        {activityOptions.estado.map(option => <option key={option}>{option}</option>)}
+                      </select>
+                    </label>
+                    <button className="secondary" type="button" onClick={() => { setTipo(''); setEstado('') }}>
+                      Restablecer filtros
+                    </button>
+                  </div>
+                </fieldset>
+                <h3 ref={resultsHeading} tabIndex={-1}>Listado de actividades</h3>
+                <p className="feedback" role="status">
+                  {visibleRecords.length} de {records.length} actividades visibles.
+                  {records.length > 0 && visibleRecords.length === 0 && ' Ninguna actividad coincide con los filtros.'}
+                </p>
+                <ActivityList activities={visibleRecords} hasRecords={records.length > 0}
+                  registerEditButton={registerEditButton} onEdit={openEditor} onDelete={deleteActivity} />
               </>
             )}
           </section>

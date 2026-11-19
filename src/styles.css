@@ -61,6 +61,17 @@ button, .button-link {
   cursor: pointer;
 }
 button:disabled { opacity: .65; cursor: default; }
+:focus-visible {
+  outline: 3px solid var(--petroleum);
+  outline-offset: 3px;
+}
+.site-header :focus-visible { outline-color: var(--gold); }
+.filter-controls {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) auto;
+  align-items: end;
+  gap: 1rem;
+}
 .secondary { background: var(--white); color: var(--petroleum); }
 .danger { color: var(--danger); border-color: var(--danger); }
 .metrics, .activity-list, .guide-grid, .form-grid {
@@ -114,6 +125,6 @@ textarea { resize: vertical; }
   .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 32rem) {
-  .form-grid, .guide-grid { grid-template-columns: 1fr; }
+  .form-grid, .guide-grid, .filter-controls { grid-template-columns: 1fr; }
   .container { width: calc(100% - 1.5rem); }
 }

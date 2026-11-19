@@ -26,3 +26,9 @@ El 19 de noviembre de 2026, `npm test`, `npm run lint` y `npm run build` finaliz
 Chromium ejecutó `npm run qa:browser -- http://127.0.0.1:4192/catedra-jgh-react-uvm-e4-2/` contra la compilación local. Pasaron los recorridos en escritorio (1440 × 1000), tableta (768 × 1024) y móvil (390 × 844). Se comprobaron ambos filtros por separado y combinados, restablecimiento con teclado, ausencia de coincidencias, contador anunciado, foco visible y destinos del foco al abrir, cancelar, guardar o eliminar. Se verificaron el CRUD con recargas, el diseño sin desbordamiento y que filtrar y restablecer conservaran los registros de prueba almacenados.
 
 Capturas con datos ficticios en [escritorio](assets/desktop-filtros.png), [móvil](assets/movil-filtros.png) y [móvil sin coincidencias](assets/movil-filtros-vacio.png).
+
+## Segunda contribución · validación posterior a la integración
+
+El [PR #1](https://github.com/mmorfe-engineer/catedra-jgh-react-uvm-e4-2/pull/1) quedó integrado en `897f472aab4aef5c76d226d9e2da9e8e3a409902`. Los trabajos de compilación y despliegue del [workflow 44604085430](https://github.com/mmorfe-engineer/catedra-jgh-react-uvm-e4-2/actions/runs/44604085430) concluyeron correctamente.
+
+Chromium repitió el recorrido completo en [GitHub Pages](https://mmorfe-engineer.github.io/catedra-jgh-react-uvm-e4-2/). Los tres tamaños aprobaron filtros, teclado, foco, mensajes de estado, CRUD, persistencia y responsive. Cada recorrido usó un perfil de prueba independiente.

@@ -2,7 +2,7 @@
 
 ## Estado
 
-**PASS** para la base técnica. **PENDIENTE** para la entrega académica hasta contar con Figma, video y la contribución reservada.
+**PASS** para la base técnica y la segunda contribución. **PENDIENTE** para la entrega académica hasta contar con el archivo nativo de Figma y el video explicativo.
 
 ## Pliego y evidencia
 
@@ -23,13 +23,18 @@ Seis pruebas unitarias aprobadas, ESLint sin incidencias, compilación Vite y tr
 
 [GitHub Pages](https://mmorfe-engineer.github.io/catedra-jgh-react-uvm-e4-2/). El [workflow del commit técnico](https://github.com/mmorfe-engineer/catedra-jgh-react-uvm-e4-2/actions/runs/44593808049) terminó correctamente tras corregir el comando de pruebas para Node 22. Chromium verificó carga, CSS, JavaScript, CRUD con recargas y responsive contra la URL pública en escritorio, tableta y móvil.
 
+El [workflow de la segunda contribución](https://github.com/mmorfe-engineer/catedra-jgh-react-uvm-e4-2/actions/runs/44604085430) compiló y desplegó el merge del PR #1. La [validación en producción](VALIDACION.md) confirmó filtros, teclado, foco y regresión del CRUD en tres tamaños.
+
 ## Git y autoría
 
-`main` contiene el commit técnico desplegado `4efa0cd8119ba2dacabce08414e74e6c6faa0925`, publicado en `origin/main`. La auditoría, documentación y capturas se registran en un hito posterior. Autor registrado en los commits técnicos: MARTIN MORFE FLORES <morfefloresm@uvm.edu.ve>.
+El commit técnico de la base es `4efa0cd8119ba2dacabce08414e74e6c6faa0925`. Su autor es MARTIN MORFE FLORES <morfefloresm@uvm.edu.ve>. El [PR #1](https://github.com/mmorfe-engineer/catedra-jgh-react-uvm-e4-2/pull/1) se integró mediante el merge commit `897f472aab4aef5c76d226d9e2da9e8e3a409902`. Se verificó la coincidencia entre `main` y `origin/main` en ese punto.
 
 ## Contribución de morfemartin
 
-PENDIENTE. El bloque reservado comprende filtros por tipo y estado, vacío filtrado, accesibilidad de controles, teclado y foco relacionado, revisión de Editar/Eliminar y pruebas específicas. La rama propuesta es `feature/activity-filters-accessibility-morfemartin`, con identidad Git Martin Alejandro Morfe Carballo <morfecarballoma@uvm.edu.ve>. Tras integrar su PR, revisar autores y commits, y repetir QA.
+GitHub atribuyó ambos commits a Martin Alejandro Morfe Carballo <morfecarballoma@uvm.edu.ve> (`morfemartin`). La integración preservó sus identificadores.
+
+- `0b14c8a4d4b321a49d057b226ae665d6fcc91403` añade filtros, controles accesibles, gestión del foco y cobertura en Chromium.
+- `2bc9b82b1b6e98045d29436e62cbabe02e3a7de3` registra las pruebas y capturas.
 
 ## Figma y video
 

@@ -7,13 +7,18 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "node --test"
+    "test": "node --test --test-isolation=none",
+    "lint": "eslint .",
+    "qa:browser": "node scripts/browser-qa.mjs"
   },
   "dependencies": {
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
   "devDependencies": {
+    "eslint": "^9.39.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "playwright": "^1.65.1",
     "vite": "^7.2.0"
   }
 }

@@ -5,6 +5,10 @@
   --ink: #203236;
   --petroleum: #103d45;
   --gold: #f0d39a;
+  --white: #fffcf6;
+  --line: #d8d2c5;
+  --muted: #4b5d5e;
+  --danger: #8a2e29;
   color: var(--ink);
   background: var(--paper);
   font-family: system-ui, sans-serif;
@@ -16,8 +20,100 @@ body { margin: 0; }
 .site-header, .site-footer { background: var(--petroleum); color: var(--paper); padding-block: 1.25rem; }
 .site-header p { margin-block: 0; }
 .site-header small { color: var(--gold); }
-main { padding-block: clamp(2rem, 6vw, 5rem); }
-.hero { margin-bottom: 3rem; }
 h1, h2 { font-family: Georgia, serif; line-height: 1.1; }
 h1 { font-size: clamp(2.6rem, 7vw, 5rem); margin-block: .2em; }
 main p { max-width: 62ch; }
+
+.header-content, .footer-content, .section-heading, .actions, nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.header-content, .footer-content, .section-heading { justify-content: space-between; }
+.university { font-weight: 700; }
+nav a { color: var(--paper); text-underline-offset: .25em; }
+.hero-band { background: #ede7d8; border-bottom: 1px solid var(--line); }
+.intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  align-items: end;
+  gap: clamp(1.5rem, 5vw, 5rem);
+  padding-block: clamp(2rem, 6vw, 5.5rem);
+}
+.hero h1 { color: var(--petroleum); }
+.eyebrow, .card-meta { color: #644b23; font-weight: 700; }
+.about { border-left: 3px solid #a47d40; padding: .15rem 1.25rem; }
+h2 { color: var(--petroleum); font-size: clamp(1.65rem, 3vw, 2.35rem); }
+h2, h3 { margin-block: 0 .5rem; }
+.section-heading p, .footer-content p, .about p { margin-block: 0; }
+.main-content { padding-block: clamp(2rem, 5vw, 4rem); }
+button, .button-link {
+  display: inline-block;
+  border: 1px solid var(--petroleum);
+  border-radius: .4rem;
+  background: var(--petroleum);
+  color: white;
+  padding: .65rem 1rem;
+  font: inherit;
+  font-weight: 650;
+  text-decoration: none;
+  cursor: pointer;
+}
+button:disabled { opacity: .65; cursor: default; }
+.secondary { background: var(--white); color: var(--petroleum); }
+.danger { color: var(--danger); border-color: var(--danger); }
+.metrics, .activity-list, .guide-grid, .form-grid {
+  display: grid;
+  gap: 1rem;
+}
+.metrics { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-block: 1.5rem 0; }
+.metrics div, .card, .editor, .guide-grid div {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: .55rem;
+  padding: 1rem;
+  min-width: 0;
+}
+.metrics dd { font: 700 2.2rem Georgia, serif; color: var(--petroleum); }
+dd { margin: 0; }
+.metrics dt, .card dt { color: var(--muted); font-weight: 650; }
+.feedback { margin-block: .75rem; }
+.feedback:empty { margin-block: .5rem; }
+.error { color: var(--danger); font-weight: 650; }
+.empty { color: var(--muted); padding: 1.25rem 0; }
+.activity-list { grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); }
+.card { overflow-wrap: anywhere; }
+.card dl { display: grid; gap: .5rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.card-meta { margin-block: 0 .5rem; }
+.card h3, .editor h3 { font: 700 1.4rem Georgia, serif; color: var(--petroleum); }
+.editor { margin-block: 1rem; padding: clamp(1rem, 3vw, 2rem); }
+fieldset { margin: 0 0 1rem; min-inline-size: 0; border: 1px solid var(--line); border-radius: .4rem; }
+legend, label { font-weight: 650; }
+.form-grid, .guide-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.span-form { grid-column: 1 / -1; }
+input, select, textarea {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  margin-top: .35rem;
+  border: 1px solid #778987;
+  border-radius: .35rem;
+  background: white;
+  color: var(--ink);
+  font: inherit;
+  padding: .55rem;
+}
+textarea { resize: vertical; }
+.guide { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--line); }
+.guide dt { color: var(--petroleum); font-weight: 700; }
+.footer-content { align-items: start; }
+
+@media (max-width: 46rem) {
+  .intro { grid-template-columns: 1fr; }
+  .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 32rem) {
+  .form-grid, .guide-grid { grid-template-columns: 1fr; }
+  .container { width: calc(100% - 1.5rem); }
+}

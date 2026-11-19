@@ -1,27 +1,123 @@
+import { useEffect, useRef, useState } from 'react'
+import { activityOptions } from './activities.js'
+import { ActivityForm } from './components/ActivityForm.jsx'
+import { ActivityList } from './components/ActivityList.jsx'
+import { Html5Guide } from './components/Html5Guide.jsx'
+import { useActivities } from './useActivities.js'
+
 export function App() {
+  const { records, error, save } = useActivities()
+  const [editor, setEditor] = useState(null)
+  const [message, setMessage] = useState('')
+  const [changeError, setChangeError] = useState('')
+  const editorHeading = useRef(null)
+
+  useEffect(() => {
+    if (editor) editorHeading.current?.focus()
+  }, [editor])
+
+  function openEditor(activity = null) {
+    setMessage('')
+    setChangeError('')
+    setEditor({ activity })
+  }
+
+  function saveActivity(values) {
+    const activity = editor.activity
+    const failure = save({
+      type: activity ? 'update' : 'create',
+      id: activity?.id ?? crypto.randomUUID(),
+      now: new Date().toISOString(),
+      values,
+    })
+    setChangeError(failure)
+    if (failure) return
+    setEditor(null)
+    setMessage(activity ? 'Cambios guardados.' : 'Actividad creada.')
+  }
+
+  function deleteActivity(activity) {
+    if (!window.confirm(`¿Eliminar «${activity.titulo}»?`)) return
+    const failure = save({ type: 'delete', id: activity.id })
+    setChangeError(failure)
+    setMessage(failure ? '' : 'Actividad eliminada.')
+    if (!failure && editor?.activity?.id === activity.id) setEditor(null)
+  }
+
+  const metrics = [
+    ['Total', records.length],
+    ...activityOptions.estado.map(status => [status, records.filter(activity => activity.estado === status).length]),
+  ]
+
   return (
     <>
       <header className="site-header">
-        <div className="container">
-          <p>Universidad Valle del Momboy</p>
-          <p>Cátedra Libre Dr. José Gregorio Hernández</p>
-          <small>E-Actividad 4.2 · ReactJS</small>
+        <div className="container header-content">
+          <div>
+            <p className="university">Universidad Valle del Momboy</p>
+            <p>Cátedra Libre Dr. José Gregorio Hernández</p>
+            <small>E-Actividad 4.2 · ReactJS</small>
+          </div>
+          <nav aria-label="Navegación principal">
+            <a href="#gestor">Actividades</a>
+            <a href="#html5">Guía HTML5</a>
+          </nav>
         </div>
       </header>
-      <main className="container">
-        <section className="hero" aria-labelledby="hero-title">
-          <p>Gestor de Actividades Formativas</p>
-          <h1 id="hero-title">Vida, ciencia y servicio.</h1>
-          <p>Herramienta digital para organizar las actividades formativas de la Cátedra Libre Dr. José Gregorio Hernández.</p>
-        </section>
-        <section aria-labelledby="about-title">
-          <h2 id="about-title">Sobre la Cátedra</h2>
-          <p>Un espacio de formación y reflexión que invita a estudiar su vida, obra y virtudes, con atención a su legado científico, su docencia y su vocación de servicio.</p>
-        </section>
+      <main>
+        <div className="hero-band">
+          <div className="container intro">
+            <section className="hero" aria-labelledby="hero-title">
+              <p className="eyebrow">Gestor de Actividades Formativas</p>
+              <h1 id="hero-title">Vida, ciencia<br />y servicio.</h1>
+              <p>Organiza actividades de formación, reflexión y divulgación de la Cátedra Libre Dr. José Gregorio Hernández.</p>
+              <a className="button-link" href="#gestor">Ir al gestor</a>
+            </section>
+            <section className="about" aria-labelledby="about-title">
+              <h2 id="about-title">Sobre la Cátedra</h2>
+              <p>Un espacio de formación y reflexión para estudiar su vida, obra y virtudes, con atención a su legado científico, su docencia y su vocación de servicio.</p>
+            </section>
+          </div>
+        </div>
+        <div className="container main-content">
+          <section id="gestor" aria-labelledby="activity-title">
+            <div className="section-heading">
+              <div>
+                <h2 id="activity-title">Actividades formativas</h2>
+                <p>Los registros se guardan en este navegador.</p>
+              </div>
+              <button type="button" disabled={Boolean(error)} onClick={() => openEditor()}>Nueva actividad</button>
+            </div>
+            {error ? <p role="alert" className="error">{error}</p> : (
+              <>
+                <dl className="metrics">
+                  {metrics.map(([label, value]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}
+                </dl>
+                <p className="feedback" role="status">{message}</p>
+                {changeError && <p className="error" role="alert">{changeError}</p>}
+                {editor && (
+                  <section className="editor" aria-labelledby="editor-title">
+                    <h3 id="editor-title" ref={editorHeading} tabIndex={-1}>
+                      {editor.activity ? 'Editar actividad' : 'Nueva actividad'}
+                    </h3>
+                    <ActivityForm key={editor.activity?.id ?? 'new'} activity={editor.activity}
+                      onSubmit={saveActivity} onCancel={() => { setEditor(null); setChangeError('') }} />
+                  </section>
+                )}
+                <ActivityList activities={records} onEdit={openEditor} onDelete={deleteActivity} />
+              </>
+            )}
+          </section>
+          <Html5Guide />
+        </div>
       </main>
       <footer className="site-footer">
-        <div className="container">
-          <p>Taller Front End · Universidad Valle del Momboy</p>
+        <div className="container footer-content">
+          <div>
+            <p>Universidad Valle del Momboy · E-Actividad 4.2</p>
+            <p>Taller Front End · Profesor Anggelo Huz</p>
+          </div>
+          <p>Martin Morfe.°.<br />Martin Alejandro Morfe Carballo</p>
         </div>
       </footer>
     </>

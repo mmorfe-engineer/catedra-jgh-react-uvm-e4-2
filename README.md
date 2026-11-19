@@ -12,7 +12,7 @@ El gestor permite crear, consultar, editar y eliminar actividades de formación,
 
 React renderiza la interfaz declarativamente al cambiar el estado. `localStorage` conserva los cambios al recargar. El diseño combina HTML5 semántico, una guía dentro de la aplicación, CSS propio, Grid, Flexbox y media queries. El formulario emplea etiquetas, mensajes de validación y foco inicial en el editor.
 
-La lista empieza vacía. El almacenamiento pertenece al origen y perfil del navegador. El bloque de filtros y accesibilidad de su interacción está reservado a la futura contribución de Martin Alejandro Morfe Carballo.
+La lista empieza vacía y el almacenamiento pertenece al origen y perfil del navegador. Los filtros por tipo y estado se pueden combinar o restablecer. El listado anuncia cuántas actividades coinciden y dirige el foco a un destino disponible después de guardar, cancelar o eliminar. Esta contribución corresponde a Martin Alejandro Morfe Carballo.
 
 ## Instalación y comprobaciones
 
@@ -27,7 +27,7 @@ npm run build
 npm run preview
 ```
 
-Vite indica la URL local con el prefijo `/catedra-jgh-react-uvm-e4-2/`. Las 6 pruebas unitarias aprobadas abarcan reducer, validación y persistencia. Para repetir el recorrido CRUD en Chromium, instalar el navegador con `npx playwright install chromium`, levantar la vista previa y ejecutar `npm run qa:browser`.
+Vite indica la URL local con el prefijo `/catedra-jgh-react-uvm-e4-2/`. Las 6 pruebas unitarias aprobadas abarcan reducer, validación y persistencia. Para repetir las pruebas de CRUD, filtros, teclado y foco en Chromium, instalar el navegador con `npx playwright install chromium`, levantar la vista previa y ejecutar `npm run qa:browser`.
 
 - [Arquitectura y flujo](docs/ARQUITECTURA.md)
 - [Pliego canónico](docs/PLIEGO_CANONICO.md)

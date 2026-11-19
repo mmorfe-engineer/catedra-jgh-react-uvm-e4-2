@@ -2,8 +2,9 @@ const dateFormatter = new Intl.DateTimeFormat('es-VE', {
   day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC',
 })
 
-export function ActivityList({ activities, onEdit, onDelete }) {
+export function ActivityList({ activities, hasRecords, registerEditButton, onEdit, onDelete }) {
   if (!activities.length) {
+    if (hasRecords) return null
     return <p className="empty">Aún no hay actividades registradas. Crea una actividad para empezar.</p>
   }
 
@@ -21,8 +22,10 @@ export function ActivityList({ activities, onEdit, onDelete }) {
             <div><dt>Estado</dt><dd>{activity.estado}</dd></div>
           </dl>
           <div className="actions">
-            <button className="secondary" type="button" onClick={() => onEdit(activity)}>Editar</button>
-            <button className="secondary danger" type="button" onClick={() => onDelete(activity)}>Eliminar</button>
+            <button ref={button => registerEditButton(activity.id, button)} className="secondary" type="button"
+              aria-label={`Editar «${activity.titulo}»`} onClick={() => onEdit(activity)}>Editar</button>
+            <button className="secondary danger" type="button"
+              aria-label={`Eliminar «${activity.titulo}»`} onClick={() => onDelete(activity)}>Eliminar</button>
           </div>
         </article>
       ))}

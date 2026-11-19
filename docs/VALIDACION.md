@@ -18,3 +18,11 @@ En cada viewport se intentó un alta con título en blanco, se creó y leyó una
 Configuración de Pages creada con `build_type=workflow`. La primera ejecución falló porque Node 22 rechazó `--test-isolation=none`. Se volvió a la invocación estándar `node --test` y se confirmaron seis pruebas aprobadas.
 
 El [workflow 44593808049](https://github.com/mmorfe-engineer/catedra-jgh-react-uvm-e4-2/actions/runs/44593808049) completó `npm ci`, tests, lint, build, carga del artefacto y despliegue. Chromium ejecutó `npm run qa:browser -- https://mmorfe-engineer.github.io/catedra-jgh-react-uvm-e4-2/` con el navegador ya instalado. Los tres viewports pasaron el CRUD con recargas, validación, baja confirmada, indicadores, CSS y layout, sin errores de página o carga de recursos.
+
+## Segunda contribución · validación local
+
+El 19 de noviembre de 2026, `npm test`, `npm run lint` y `npm run build` finalizaron correctamente. Node 26 reportó un archivo de pruebas aprobado en `npm test`. La ejecución directa de ese archivo confirmó los seis casos aprobados. Vite 7.3.8 compiló 34 módulos.
+
+Chromium ejecutó `npm run qa:browser -- http://127.0.0.1:4192/catedra-jgh-react-uvm-e4-2/` contra la compilación local. Pasaron los recorridos en escritorio (1440 × 1000), tableta (768 × 1024) y móvil (390 × 844). Se comprobaron ambos filtros por separado y combinados, restablecimiento con teclado, ausencia de coincidencias, contador anunciado, foco visible y destinos del foco al abrir, cancelar, guardar o eliminar. Se verificaron el CRUD con recargas, el diseño sin desbordamiento y que filtrar y restablecer conservaran los registros de prueba almacenados.
+
+Capturas con datos ficticios en [escritorio](assets/desktop-filtros.png), [móvil](assets/movil-filtros.png) y [móvil sin coincidencias](assets/movil-filtros-vacio.png).

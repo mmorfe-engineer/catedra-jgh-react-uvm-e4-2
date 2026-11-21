@@ -51,3 +51,12 @@ Se revisaron las nuevas capturas de [escritorio](assets/desktop-institucional.pn
 El enlace al [archivo nativo de Figma](https://www.figma.com/design/tuAuL4Td1Sd9Xx8EvV8Hg8) se incorporó al README, al footer de la aplicación, a la presentación, a la especificación y a la matriz. El video explicativo queda pendiente de grabación y publicación. [Guion definitivo](VIDEO_SCRIPT.md)
 
 Para el cierre del enlace del footer finalizaron `npm test`, `npm run lint` y `npm run build`. Chromium verificó el destino del enlace junto al recorrido completo en escritorio, tableta y móvil. La presentación se revisó visualmente tras renderizar sus 12 láminas, y se comprobó el destino del hipervínculo de Figma de la lámina 11.
+
+
+## Cierre definitivo
+
+El usuario confirmó la actualización manual del archivo nativo de Figma con el retrato artístico y la identidad institucional. La URL está enlazada en el README, footer, presentación y esta documentación. La revisión de disponibilidad de la URL se registra como acceso público suministrado por el usuario. El video explicativo permanece pendiente de grabación y URL real.
+
+Para este cierre, `npm test`, `npm run lint` y `npm run build` finalizaron correctamente. Chromium completó el QA integral contra el build local en 1440 × 1000, 768 × 1024 y 390 × 844. Pasaron imágenes y proporciones, enlace del footer, accesibilidad de teclado y foco, filtros, CRUD, persistencia y responsive.
+
+La presentación mantiene exactamente 12 láminas en formato 16:9. La lámina 11 incluye el vínculo al archivo nativo y una explicación breve de la intarsia digital. El video sigue pendiente hasta recibir una URL real.

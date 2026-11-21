@@ -16,6 +16,7 @@
 | Figma y video | Archivo nativo enlazado. Video pendiente de publicación. |
 | Branding e identidad artística | Logo UVM y reinterpretación artística digital del retrato, optimizados en WebP y validados en Chromium. |
 | Presentación | 12 láminas 16:9 revisadas visualmente. La lámina de conclusiones cierra el deck. |
+| Figma nativo | El usuario actualizó manualmente las pantallas con branding y retrato. [Archivo](https://www.figma.com/design/tuAuL4Td1Sd9Xx8EvV8Hg8). |
 
 ## Ejecuciones
 
@@ -48,3 +49,7 @@ GitHub atribuyó ambos commits a Martin Alejandro Morfe Carballo <morfecarballom
 ## Riesgos vigentes
 
 Los registros quedan en el almacenamiento del navegador y pueden perderse si se borra. Las escrituras simultáneas en pestañas distintas carecen de bloqueo transaccional. Actions avisó que algunas acciones declaradas para Node 20 se ejecutaron bajo Node 24. El aviso no impidió compilar ni desplegar.
+
+## Cierre definitivo
+
+El [PR #5](https://github.com/mmorfe-engineer/catedra-jgh-react-uvm-e4-2/pull/5) se integró en `d9ee7cdd0245825a32595e3241f70329e71a452c`. Actions [44928365920](https://github.com/mmorfe-engineer/catedra-jgh-react-uvm-e4-2/actions/runs/44928365920) desplegó Pages. Chromium pasó en escritorio, tableta y móvil. El video continúa pendiente de URL real.

@@ -62,3 +62,10 @@ Para este cierre, `npm test`, `npm run lint` y `npm run build` finalizaron corre
 La presentación mantiene exactamente 12 láminas en formato 16:9. La lámina 11 incluye el vínculo al archivo nativo y una explicación breve de la intarsia digital. El video sigue pendiente hasta recibir una URL real.
 
 El [PR #5](https://github.com/mmorfe-engineer/catedra-jgh-react-uvm-e4-2/pull/5) se integró en `d9ee7cdd0245825a32595e3241f70329e71a452c`. Actions [44928365920](https://github.com/mmorfe-engineer/catedra-jgh-react-uvm-e4-2/actions/runs/44928365920) completó build y despliegue. Chromium repitió el QA público en GitHub Pages en 1440 × 1000, 768 × 1024 y 390 × 844. CRUD, filtros, foco, persistencia, imágenes y enlaces pasaron.
+
+## Secuencia audiovisual animada
+
+La presentación conserva exactamente 12 láminas 16:9. Cada lámina tiene movimiento de cámara suave de 17,5 segundos, para una secuencia MP4 de 3:30. Las exportaciones individuales son PNG de 1920 × 1080 en [presentacion/laminas](presentacion/laminas/). El deck incluye capturas reales de Chromium, fragmentos de código fuente y una explicación breve de intarsia digital. La grabación explicativa con narración humana sigue pendiente de una URL real.
+
+
+La exportación se verificó con ffprobe: 1920 × 1080, 30 fps, 6300 fotogramas y duración exacta 210 segundos. Las 12 fuentes PNG individuales miden 1920 × 1080.

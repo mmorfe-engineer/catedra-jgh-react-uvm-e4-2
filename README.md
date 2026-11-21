@@ -50,10 +50,11 @@ Vite indica la URL local con el prefijo `/catedra-jgh-react-uvm-e4-2/`. Las 6 pr
 ## Entregables
 
 - Aplicación publicada y verificada con Chromium en escritorio, tableta y móvil. [GitHub Pages](https://mmorfe-engineer.github.io/catedra-jgh-react-uvm-e4-2/)
-- Presentación académica de 12 láminas en PowerPoint. [Descargar presentación](docs/presentacion/uvm-e-actividad-4-2.pptx)
+- Secuencia audiovisual de 12 láminas, 3:30 minutos, con capturas reales y código. [Video animado](docs/presentacion/uvm-e-actividad-4-2-animada.mp4) · [PowerPoint con transiciones](docs/presentacion/uvm-e-actividad-4-2.pptx)
+- 12 láminas individuales PNG de 1920 × 1080 para Gemini Presentaciones. [Abrir carpeta](docs/presentacion/laminas/)
 - Historial de la segunda contribución. [PR de filtros y accesibilidad](https://github.com/mmorfe-engineer/catedra-jgh-react-uvm-e4-2/pull/1) · [PR de validación en producción](https://github.com/mmorfe-engineer/catedra-jgh-react-uvm-e4-2/pull/2)
 - [Archivo nativo de Figma](https://www.figma.com/design/tuAuL4Td1Sd9Xx8EvV8Hg8). [Paquete de referencia](docs/figma/README.md) · [Especificación](docs/FIGMA_SPEC.md)
-- **Video explicativo pendiente.** [Guion](docs/VIDEO_SCRIPT.md)
+- **Video explicativo narrado pendiente de publicación.** [Guion y ritmo de láminas](docs/VIDEO_SCRIPT.md) · [Secuencia visual animada sin narración](docs/presentacion/uvm-e-actividad-4-2-animada.mp4)
 
 ## Identidad visual: arte, ciencia y servicio
 

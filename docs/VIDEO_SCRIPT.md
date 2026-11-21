@@ -19,3 +19,8 @@ Usar el sitio publicado en un perfil limpio, con datos ficticios. Tener abiertas
 **Comprobación antes de publicar el video.** Revisar sonido, legibilidad de la interfaz y ausencia de datos personales en pantalla. Confirmar el acceso desde una sesión sin iniciar. Incorporar la URL real al README y a la matriz de cumplimiento.
 
 [Aplicación](https://mmorfe-engineer.github.io/catedra-jgh-react-uvm-e4-2/) · [Figma](https://www.figma.com/design/tuAuL4Td1Sd9Xx8EvV8Hg8) · [Presentación](presentacion/uvm-e-actividad-4-2.pptx)
+
+
+## Ritmo de la secuencia audiovisual
+
+La pieza se compone de 12 láminas animadas de 17,5 segundos cada una, para un total de 3:30. El movimiento es un paneo y acercamiento suave sobre la lámina. No contiene narración grabada. La producción de video explicativo con voces humanas permanece pendiente de publicación y URL real.

@@ -15,7 +15,7 @@
 | GitHub | Código publicado en `main` del repositorio canónico. |
 | Figma y video | Archivo nativo enlazado. Video pendiente de publicación. |
 | Branding e identidad artística | Logo UVM y reinterpretación artística digital del retrato, optimizados en WebP y validados en Chromium. |
-| Presentación | 12 láminas 16:9 revisadas visualmente. La lámina de conclusiones cierra el deck. |
+| Presentación | 12 láminas 16:9 con transiciones, revisadas visualmente. PNG individuales 1920 × 1080 y video animado de 3:30. |
 | Figma nativo | El usuario actualizó manualmente las pantallas con branding y retrato. [Archivo](https://www.figma.com/design/tuAuL4Td1Sd9Xx8EvV8Hg8). |
 
 ## Ejecuciones

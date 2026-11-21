@@ -201,7 +201,10 @@ try {
     assert.deepEqual(await articles.getByRole('heading').allTextContents(), ['Taller de servicio'])
     await articles.getByText('Realizada', { exact: true }).waitFor()
     assert.equal(await page.getByRole('heading', { name: 'HTML5 aplicado en este proyecto' }).isVisible(), true)
-    assert.equal(await page.getByRole('contentinfo').isVisible(), true)
+    const footer = page.getByRole('contentinfo')
+    assert.equal(await footer.isVisible(), true)
+    assert.equal(await footer.getByRole('link', { name: 'Diseño en Figma' }).getAttribute('href'),
+      'https://www.figma.com/design/tuAuL4Td1Sd9Xx8EvV8Hg8')
     await checkLayout()
     assert.deepEqual(errors, [])
     console.log(`${name} ${width}×${height}: filtros, teclado, foco, estados, CRUD, persistencia y responsive OK`)

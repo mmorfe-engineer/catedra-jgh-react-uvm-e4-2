@@ -2,7 +2,7 @@
 
 ## Estado
 
-**PASS** para la base técnica y la segunda contribución. **PENDIENTE** para la entrega académica hasta contar con el archivo nativo de Figma y el video explicativo.
+**PASS** para la base técnica y la segunda contribución. **PENDIENTE** para la entrega académica hasta incorporar el enlace real del video explicativo.
 
 ## Pliego y evidencia
 
@@ -13,7 +13,7 @@
 | Cátedra y HTML5 | La identidad, el contenido de formación y la guía de semántica se muestran en pantalla. |
 | CSS, plantillas y responsive | Hoja propia y capturas locales revisadas en tres tamaños. |
 | GitHub | Código publicado en `main` del repositorio canónico. |
-| Figma y video | PENDIENTE. Especificación y guion listos para producir los entregables. |
+| Figma y video | Archivo nativo enlazado. Video pendiente de publicación. |
 
 ## Ejecuciones
 
@@ -38,7 +38,7 @@ GitHub atribuyó ambos commits a Martin Alejandro Morfe Carballo <morfecarballom
 
 ## Figma y video
 
-- Figma PENDIENTE — ACCIÓN HUMANA EXTERNA. [Especificación](FIGMA_SPEC.md).
+- Figma disponible. [Archivo nativo](https://www.figma.com/design/tuAuL4Td1Sd9Xx8EvV8Hg8) · [Especificación](FIGMA_SPEC.md).
 - Video PENDIENTE — ACCIÓN HUMANA EXTERNA. [Guion](VIDEO_SCRIPT.md).
 
 ## Riesgos vigentes

@@ -1,6 +1,6 @@
 # Especificación Figma
 
-**Archivo nativo pendiente.** El [paquete de referencia](figma/README.md) incluye las seis capturas del sitio publicado y la lámina del sistema de diseño.
+[Archivo nativo de Figma](https://www.figma.com/design/tuAuL4Td1Sd9Xx8EvV8Hg8). El [paquete de referencia](figma/README.md) incluye las seis capturas del sitio publicado y la lámina del sistema de diseño. La sincronización de las seis pantallas en el archivo nativo queda pendiente por el límite de llamadas de Figma.
 
 | Frame | Tamaño de referencia | Contenido |
 | --- | --- | --- |

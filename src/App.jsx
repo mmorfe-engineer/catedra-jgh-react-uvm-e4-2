@@ -196,6 +196,7 @@ export function App() {
           <div>
             <p>Universidad Valle del Momboy · E-Actividad 4.2</p>
             <p>Taller Front End · Profesor Anggelo Huz</p>
+            <a href="https://www.figma.com/design/tuAuL4Td1Sd9Xx8EvV8Hg8">Diseño en Figma</a>
           </div>
           <p>Martin Morfe.°.<br />Martin Alejandro Morfe Carballo</p>
         </div>

@@ -38,10 +38,16 @@ Chromium repitió el recorrido completo en [GitHub Pages](https://mmorfe-enginee
 - `npm test`, `npm run lint` y `npm run build` finalizaron correctamente. La ejecución directa confirmó seis casos unitarios aprobados.
 - Chromium repitió el recorrido en producción en 1440 × 1000, 768 × 1024 y 390 × 844. El [workflow del HEAD publicado](https://github.com/mmorfe-engineer/catedra-jgh-react-uvm-e4-2/actions/runs/44604595775) confirmó el despliegue de `3806f3c1e3c5a87b882d8c8b01510bc02960ddf8`.
 - La [presentación](presentacion/uvm-e-actividad-4-2.pptx) se renderizó en LibreOffice y se revisó visualmente en 12 láminas de formato 16:9. El [paquete de referencia Figma](figma/README.md) contiene seis capturas reales y una lámina vectorial con el sistema de diseño.
-- Se verificaron las rutas locales nuevas y los enlaces públicos. El archivo nativo de Figma y el video explicativo siguen pendientes.
+- Se verificaron las rutas locales nuevas y los enlaces públicos. En ese momento seguían pendientes Figma y video.
 
 ## Refinamiento visual institucional
 
 La compilación local pasó `npm test`, `npm run lint` y `npm run build`. Chromium completó el recorrido de CRUD, filtros, teclado, foco y persistencia en escritorio (1440 × 1000), tableta (768 × 1024) y móvil (390 × 844). El recorrido también comprobó la carga y proporción del emblema y el retrato, la selección de la variante WebP de 384 px a densidad 1× y el cambio de posición del retrato sin desbordamiento horizontal.
 
 Se revisaron las nuevas capturas de [escritorio](assets/desktop-institucional.png), [tableta](assets/tablet-institucional.png) y [móvil](assets/movil-institucional.png). Se actualizaron las seis referencias para Figma y se volvieron a renderizar y revisar las 12 láminas de la presentación.
+
+## Cierre de enlaces
+
+El enlace al [archivo nativo de Figma](https://www.figma.com/design/tuAuL4Td1Sd9Xx8EvV8Hg8) se incorporó al README, al footer de la aplicación, a la presentación, a la especificación y a la matriz. El video explicativo queda pendiente de grabación y publicación. [Guion definitivo](VIDEO_SCRIPT.md)
+
+Para el cierre del enlace del footer finalizaron `npm test`, `npm run lint` y `npm run build`. Chromium verificó el destino del enlace junto al recorrido completo en escritorio, tableta y móvil. La presentación se revisó visualmente tras renderizar sus 12 láminas, y se comprobó el destino del hipervínculo de Figma de la lámina 11.

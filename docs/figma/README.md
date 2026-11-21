@@ -1,6 +1,6 @@
 # Paquete de referencia para Figma
 
-El archivo nativo y su enlace están pendientes. Las seis referencias se capturaron en Chromium contra la compilación del refinamiento institucional, con datos ficticios de QA. Cada PNG conserva la página completa, incluido el contenido visible mediante desplazamiento.
+Consulta el [archivo nativo de Figma](https://www.figma.com/design/tuAuL4Td1Sd9Xx8EvV8Hg8). Las seis referencias se capturaron en Chromium contra la compilación del refinamiento institucional, con datos ficticios de QA. Cada PNG conserva la página completa, incluido el contenido visible mediante desplazamiento.
 
 | Frame | Viewport | Referencia |
 | --- | --- | --- |

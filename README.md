@@ -40,7 +40,7 @@ Vite indica la URL local con el prefijo `/catedra-jgh-react-uvm-e4-2/`. Las 6 pr
 - Aplicación publicada y verificada con Chromium en escritorio, tableta y móvil. [GitHub Pages](https://mmorfe-engineer.github.io/catedra-jgh-react-uvm-e4-2/)
 - Presentación académica de 12 láminas en PowerPoint. [Descargar presentación](docs/presentacion/uvm-e-actividad-4-2.pptx)
 - Historial de la segunda contribución. [PR de filtros y accesibilidad](https://github.com/mmorfe-engineer/catedra-jgh-react-uvm-e4-2/pull/1) · [PR de validación en producción](https://github.com/mmorfe-engineer/catedra-jgh-react-uvm-e4-2/pull/2)
-- **Figma nativo pendiente.** [Paquete de referencia](docs/figma/README.md) · [Especificación](docs/FIGMA_SPEC.md)
+- [Archivo nativo de Figma](https://www.figma.com/design/tuAuL4Td1Sd9Xx8EvV8Hg8). [Paquete de referencia](docs/figma/README.md) · [Especificación](docs/FIGMA_SPEC.md)
 - **Video explicativo pendiente.** [Guion](docs/VIDEO_SCRIPT.md)
 
 ## Capturas de la interfaz

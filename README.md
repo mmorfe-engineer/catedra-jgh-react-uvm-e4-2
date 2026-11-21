@@ -1,12 +1,24 @@
 # Cátedra Libre Dr. José Gregorio Hernández
 
-**Gestor de Actividades Formativas** · Universidad Valle del Momboy
+<p align="center">
+  <img src="src/assets/uvm-logo.webp" alt="Emblema de la Universidad Valle del Momboy" width="112">
+</p>
+
+<p align="center"><strong>Gestor de Actividades Formativas</strong> · Universidad Valle del Momboy</p>
+
+<p align="center">
+  <a href="https://github.com/mmorfe-engineer/catedra-jgh-react-uvm-e4-2/actions/workflows/pages.yml"><img alt="GitHub Pages" src="https://github.com/mmorfe-engineer/catedra-jgh-react-uvm-e4-2/actions/workflows/pages.yml/badge.svg"></a>
+  <a href="https://github.com/mmorfe-engineer/catedra-jgh-react-uvm-e4-2/pulls?q=is%3Apr+is%3Amerged"><img alt="Pull requests integrados" src="https://img.shields.io/badge/PRs%20de%20contribuci%C3%B3n-1%E2%80%934-103d45"></a>
+  <a href="https://mmorfe-engineer.github.io/catedra-jgh-react-uvm-e4-2/"><img alt="Aplicación publicada" src="https://img.shields.io/badge/GitHub%20Pages-publicada-2e7d32"></a>
+</p>
 
 E-Actividad 4.2 de FrontEndIVIVFI2026C · Taller Front End · profesor Anggelo Huz · ponderación 15 %.
 
 **Integrantes:** Martin Morfe.°. y Martin Alejandro Morfe Carballo.
 
 ## Aplicación
+
+[Abrir el gestor publicado](https://mmorfe-engineer.github.io/catedra-jgh-react-uvm-e4-2/) · [Abrir el diseño nativo en Figma](https://www.figma.com/design/tuAuL4Td1Sd9Xx8EvV8Hg8)
 
 El gestor permite crear, consultar, editar y eliminar actividades de formación, reflexión y divulgación. Cada actividad tiene título, tipo, eje, fecha, modalidad, responsable, descripción y estado. El formulario valida sus datos y la baja pide confirmación. Los indicadores se calculan a partir de la lista.
 
@@ -42,6 +54,24 @@ Vite indica la URL local con el prefijo `/catedra-jgh-react-uvm-e4-2/`. Las 6 pr
 - Historial de la segunda contribución. [PR de filtros y accesibilidad](https://github.com/mmorfe-engineer/catedra-jgh-react-uvm-e4-2/pull/1) · [PR de validación en producción](https://github.com/mmorfe-engineer/catedra-jgh-react-uvm-e4-2/pull/2)
 - [Archivo nativo de Figma](https://www.figma.com/design/tuAuL4Td1Sd9Xx8EvV8Hg8). [Paquete de referencia](docs/figma/README.md) · [Especificación](docs/FIGMA_SPEC.md)
 - **Video explicativo pendiente.** [Guion](docs/VIDEO_SCRIPT.md)
+
+## Identidad visual: arte, ciencia y servicio
+
+<p align="center">
+  <img src="src/assets/jgh-intarsia-768.webp" alt="Reinterpretación artística digital generada con IA del Dr. José Gregorio Hernández, en estilo intarsia, con piezas cromáticas que sugieren madera ensamblada" width="340">
+</p>
+
+El retrato del Dr. José Gregorio Hernández es una reinterpretación artística digital inspirada en la Intarsienkunst, tradición de ebanistería conocida como intarsia o taracea.
+
+Esta técnica consiste en cortar, ajustar y ensamblar piezas de madera de diferentes tonalidades, vetas y texturas para construir una composición figurativa, aprovechando las características visuales de cada material.
+
+La propuesta traslada estos principios al entorno digital mediante segmentos cromáticos, superficies texturizadas y efectos de volumen tridimensional, conservando los atributos iconográficos del médico venezolano.
+
+Su incorporación establece un vínculo entre el patrimonio cultural, la sensibilidad artística y las tecnologías contemporáneas de desarrollo web.
+
+La imagen es una reinterpretación artística digital generada con IA. No es una obra física de ebanistería ni una fotografía histórica.
+
+Referencias técnicas sobre [Intarsie](https://www.rdklabor.de/wiki/Intarsie) y [Einlegearbeit](https://www.rdklabor.de/wiki/Einlegearbeit).
 
 ## Capturas de la interfaz
 

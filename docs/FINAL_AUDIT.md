@@ -14,6 +14,8 @@
 | CSS, plantillas y responsive | Hoja propia y capturas locales revisadas en tres tamaños. |
 | GitHub | Código publicado en `main` del repositorio canónico. |
 | Figma y video | Archivo nativo enlazado. Video pendiente de publicación. |
+| Branding e identidad artística | Logo UVM y reinterpretación artística digital del retrato, optimizados en WebP y validados en Chromium. |
+| Presentación | 12 láminas 16:9 revisadas visualmente. La lámina de conclusiones cierra el deck. |
 
 ## Ejecuciones
 
@@ -40,6 +42,8 @@ GitHub atribuyó ambos commits a Martin Alejandro Morfe Carballo <morfecarballom
 
 - Figma disponible. [Archivo nativo](https://www.figma.com/design/tuAuL4Td1Sd9Xx8EvV8Hg8) · [Especificación](FIGMA_SPEC.md).
 - Video PENDIENTE — ACCIÓN HUMANA EXTERNA. [Guion](VIDEO_SCRIPT.md).
+- PR #3 integra el branding visual. [Cambios](https://github.com/mmorfe-engineer/catedra-jgh-react-uvm-e4-2/pull/3).
+- El usuario confirmó que actualizó manualmente el archivo nativo con el retrato y la identidad institucional. [Archivo público](https://www.figma.com/design/tuAuL4Td1Sd9Xx8EvV8Hg8).
 
 ## Riesgos vigentes
 
